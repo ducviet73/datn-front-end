@@ -52,7 +52,7 @@ const CartPage = () => {
                         {cartItems.map((item) => (
                             <tr className="thanhtoan-all" key={`${item._id}-${item.size}-${item.color}`}>
                                 <td className="thanhtoan-1">
-                                    <img src={`http://localhost:3000/img/${item.image}`} alt={item.name} />
+                                    <img src={`https://datn-back-end.onrender.com/img/${item.image}`} alt={item.name} />
                                 </td>
                                 <td className="thanhtoan-2">
                                     <span className="ten-sp">{item.name}</span>

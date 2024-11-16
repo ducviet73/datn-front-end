@@ -53,7 +53,7 @@ function ProductCard({ data }) {
               <div className="nav-product-item-img">
                 <Link href={`/products/${_id}`}>
                   <img
-                    src={`http://localhost:3000/img/${image}`}
+                    src={`https://datn-back-end.onrender.com/img/${image}`}
                     alt={name}
                     style={{ height: '300px' }}
                   />

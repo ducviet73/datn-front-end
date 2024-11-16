@@ -16,7 +16,7 @@ const UserForm = ({ userId, onUserUpdated, onClose }) => {
 
     useEffect(() => {
         if (userId) {
-            axios.get(`http://localhost:3000/users/${userId}`)
+            axios.get(`https://datn-back-end.onrender.com/users/${userId}`)
                 .then(response => setUser(response.data))
                 .catch(error => console.error("Có lỗi xảy ra:", error));
         }
@@ -29,7 +29,7 @@ const UserForm = ({ userId, onUserUpdated, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const request = userId ? axios.put(`http://localhost:3000/users/${userId}`, user) : axios.post('http://localhost:3000/users', user);
+        const request = userId ? axios.put(`https://datn-back-end.onrender.com/users/${userId}`, user) : axios.post('https://datn-back-end.onrender.com/users', user);
         request.then(response => {
             onUserUpdated();
         }).catch(error => console.error("Có lỗi xảy ra:", error));
@@ -76,7 +76,7 @@ const RoleUpdateForm = ({ userId, onRoleUpdated, onClose }) => {
 
     useEffect(() => {
         if (userId) {
-            axios.get(`http://localhost:3000/users/${userId}`)
+            axios.get(`https://datn-back-end.onrender.com/users/${userId}`)
                 .then(response => setRole(response.data.role))
                 .catch(error => console.error("Có lỗi xảy ra:", error));
         }
@@ -88,7 +88,7 @@ const RoleUpdateForm = ({ userId, onRoleUpdated, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:3000/users/${userId}`, { role })
+        axios.put(`https://datn-back-end.onrender.com/users/${userId}`, { role })
             .then(response => {
                 onRoleUpdated();
             })
@@ -127,7 +127,7 @@ const UserListWithRoleUpdate = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/users');
+                const response = await axios.get('https://datn-back-end.onrender.com/users');
                 const userList = response.data;
                 setUsers(userList);
                 setUserStats({
@@ -148,7 +148,7 @@ const UserListWithRoleUpdate = () => {
     const deleteUser = async (id) => {
         if (window.confirm('Bạn có chắc chắn muốn xóa người dùng này?')) {
             try {
-                await axios.delete(`http://localhost:3000/users/${id}`);
+                await axios.delete(`https://datn-back-end.onrender.com/users/${id}`);
                 alert('Người dùng đã được xóa thành công.');
                 setUsers(prevUsers => prevUsers.filter(user => user._id !== id));
                 setUserStats(prevStats => ({

@@ -12,7 +12,7 @@ export default function Product() {
 
   // Fetch data based on the current page
   const { data: productData, error, isLoading } = useSWR(
-    `http://localhost:3000/products/page?page=${currentPage}&limit=5`,
+    `https://datn-back-end.onrender.com/products/page?page=${currentPage}&limit=5`,
     fetcher,
     {
       refreshInterval: 10000, // Auto-refresh every 10 seconds
@@ -23,7 +23,7 @@ export default function Product() {
   const deleteItem = async (itemId) => {
     if (confirm('Bạn có chắc chắn muốn xóa không?')) {
       try {
-        const response = await fetch(`http://localhost:3000/products/${itemId}`, {
+        const response = await fetch(`https://datn-back-end.onrender.com/products/${itemId}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
@@ -129,7 +129,7 @@ export default function Product() {
                 return (
                   <tr key={_id}>
                     <td style={{ width: "64px" }}>
-                      <img src={`http://localhost:3000/img/${image}`} alt={name} className="w-100" />
+                      <img src={`https://datn-back-end.onrender.com/img/${image}`} alt={name} className="w-100" />
                     </td>
                     <td className="text-start">
                       <strong>{name}</strong>

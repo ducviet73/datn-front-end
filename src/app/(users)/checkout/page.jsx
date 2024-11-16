@@ -87,7 +87,7 @@ const CheckoutPage = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/orders', {
+            const response = await fetch('https://datn-back-end.onrender.com/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -227,7 +227,7 @@ const CheckoutPage = () => {
                                 <div className="row">
                                     <div className="col-4">
                                         <img
-                                            src={`http://localhost:3000/img/${item.image}`}
+                                            src={`https://datn-back-end.onrender.com/img/${item.image}`}
                                             alt={item.name}
                                             className="img-fluid"
                                         />

@@ -12,7 +12,7 @@ const OrderHistory = () => {
 
     useEffect(() => {
         if (user?._id) {
-            axios.get(`http://localhost:3000/orders/user/${user._id}`)
+            axios.get(`https://datn-back-end.onrender.com/orders/user/${user._id}`)
                 .then(response => {
                     setOrders(response.data);
                 })
@@ -25,7 +25,7 @@ const OrderHistory = () => {
 
     const handleCancelOrder = async (orderId) => {
         try {
-            await axios.put(`http://localhost:3000/orders/${orderId}/status`, { status: 'cancelled' });
+            await axios.put(`https://datn-back-end.onrender.com/orders/${orderId}/status`, { status: 'cancelled' });
             setOrders(orders.map(order =>
                 order._id === orderId ? { ...order, status: 'cancelled' } : order
             ));

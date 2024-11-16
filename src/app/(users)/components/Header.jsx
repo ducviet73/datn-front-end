@@ -142,7 +142,7 @@
                     <>
                       {cartItems.map((item, index) => (
                         <div key={index} className="d-flex align-items-center mb-2">
-                          <img src={`http://localhost:3000/img/${item.image}`} alt={item.name} style={{width: '50px', height: '50px', objectFit: 'cover'}} className="me-2" />
+                          <img src={`https://datn-back-end.onrender.com/img/${item.image}`} alt={item.name} style={{width: '50px', height: '50px', objectFit: 'cover'}} className="me-2" />
                           <div>
                             <p className="mb-0 font-weight-bold">{item.name}</p>
                             <small>{item.quantity} x {item.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</small>

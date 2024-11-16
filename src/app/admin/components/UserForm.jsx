@@ -15,7 +15,7 @@ const UserForm = ({ userId, onUserUpdated }) => {
 
     useEffect(() => {
         if (userId) {
-            axios.get(`http://localhost:3000/users/${userId}`)
+            axios.get(`https://datn-back-end.onrender.com/users/${userId}`)
                 .then(response => setUser(response.data))
                 .catch(error => console.error("Có lỗi xảy ra:", error));
         }
@@ -28,7 +28,7 @@ const UserForm = ({ userId, onUserUpdated }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const request = userId ? axios.put(`http://localhost:3000/users/${userId}`, user) : axios.post('http://localhost:3000/users', user);
+        const request = userId ? axios.put(`https://datn-back-end.onrender.com/users/${userId}`, user) : axios.post('https://datn-back-end.onrender.com/users', user);
         request.then(response => {
             onUserUpdated();
         }).catch(error => console.error("Có lỗi xảy ra:", error));

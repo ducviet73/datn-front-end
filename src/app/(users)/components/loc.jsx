@@ -9,7 +9,7 @@ export default function loc() {
 
   useEffect(() => {
     async function fetchProducts() {
-      const res = await fetch('http://localhost:3000/products');
+      const res = await fetch('https://datn-back-end.onrender.com/products');
       const newProducts = await res.json();
       setProducts(newProducts);
     }

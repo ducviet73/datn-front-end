@@ -18,7 +18,7 @@ export default function Detail({ params }) {
   const cart = useSelector((state) => state.cart);
 
   const { data, error, isLoading } = useSWR(
-    `http://localhost:3000/products/detail/${params.id}`,
+    `https://datn-back-end.onrender.com/products/detail/${params.id}`,
     fetcher
   );
 
@@ -98,7 +98,7 @@ export default function Detail({ params }) {
           <div className="detail_temple_2">
             <div className="detail_temple_2_img_main">
               <img
-                src={`http://localhost:3000/img/${data.image}`}
+                src={`https://datn-back-end.onrender.com/img/${data.image}`}
                 alt={data.name}
               />
             </div>

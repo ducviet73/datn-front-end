@@ -9,7 +9,7 @@ export default function ProductNew() {
     // Fetch data when the component mounts
     async function fetchData () {
       try {
-        const res = await fetch(`http://localhost:3000/products/newproducts`, { cache: 'no-store' });
+        const res = await fetch(`https://datn-back-end.onrender.com/products/newproducts`, { cache: 'no-store' });
         const result = await res.json();
         setData(result);
       } catch (error) {
