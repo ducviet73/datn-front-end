@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-"dev": " next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "cross-env PORT=3001 node server.js",
+    "start": " node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -21,8 +21,5 @@
     "redux-persist": "^6.0.0",
     "swr": "^2.2.5",
     "yup": "^1.4.0"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3"
   }
 }
