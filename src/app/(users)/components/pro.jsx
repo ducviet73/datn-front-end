@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ProductCard from "@/app/(users)/components/ProductCard";
+import ProductCard from "./ProductCard";
 
 export default function Pro({ key }) {
   const [data, setProduct] = useState([]); // Initialize as an empty array
