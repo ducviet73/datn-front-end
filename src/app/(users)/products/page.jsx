@@ -17,7 +17,7 @@ export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  const fetchProducts = async (page = 1, limit = 2) => {
+  const fetchProducts = async (page = 1, limit = 4) => {
     try {
       const res = await fetch(`http://localhost:3000/products/page?page=${page}&limit=${limit}`, {
         cache: "no-store",

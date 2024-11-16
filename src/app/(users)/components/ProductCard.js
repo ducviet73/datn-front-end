@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/slices/cartSlices'; // Đảm bảo import đúng từ cartSlices.js
+import Category from '../category/page';
 
 function ProductCard({ data }) {
   const router = useRouter();
@@ -47,18 +48,16 @@ function ProductCard({ data }) {
         const totalStars = 5;
 
         return (
-          <div className="col-sm-6 col-md-4 col-lg-3 my-3" key={_id}>
-            <div className="nav-product-item">
+          <div className="col-sm-6 col-md-4 col-lg-3 my-3 h-100" key={_id}>
+            <div className="nav-product-item d-flex flex-column"  style={{ height: '560px' }}>
               <div className="nav-product-item-img">
                 <Link href={`/products/${_id}`}>
                   <img
                     src={`http://localhost:3000/img/${image}`}
                     alt={name}
+                    style={{ height: '300px' }}
                   />
                 </Link>
-              </div>
-              <div className="nav-product-item-category">
-                <span>nike</span>
               </div>
               <div className="nav-product-item-name">
                 <h3>{name}</h3>
@@ -107,8 +106,8 @@ function ProductCard({ data }) {
                   </a>
                 </div>
               </div>
-              <div className="nav-product-item-button">
-                <div className="nav-product-item-button-add-to-cart">
+              <div className="nav-product-item-button mt-auto">
+                <div className="nav-product-item-button-add-to-cart d-grid gap-2">
                   <button
                     className="detail_addtocart"
                     onClick={() => handleAddToCart(_id, quantity, selectedSize, selectedColor)}

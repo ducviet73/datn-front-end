@@ -1,3 +1,7 @@
+.nav-product-item{
+  height: 100px; /* Chiều cao cố định */
+}
+
 .main {
   display: flex;
   flex-direction: column;

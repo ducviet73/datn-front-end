@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div class="container">
+    <div class="container ">
       <div class="row mt-2 ">
         <div class="col-md-9 m-0 p-0">
           <div
@@ -26,16 +26,16 @@ const Banner = () => {
                 aria-label="Slide 2"
               ></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner" style={{ height: '640px' }}>
               <div class="carousel-item active">
                     <img
-                    src=" /img/banner-main-1.jpg"
+                    src=" /img/bn.jpg"
                     class="d-block w-100"
                     alt="..."
                     />
               </div>
               <div class="carousel-item ">
-                <img src="img/banner-main-2.jpg" class="d-block w-100" alt="..." />
+                <img src="img/bn5.jpg" class="d-block w-100" alt="..." />
               </div>
             </div>
             <button
@@ -65,9 +65,9 @@ const Banner = () => {
           </div>
         </div>
         <div class="col-md-3 m-0">
-          <img class="img-fluid" src="img/banner-main-3.jpg" alt="" />
-          <img class="img-fluid mt-2" src="img/banner-main-4.jpg" alt="" />
-          <img class="img-fluid mt-2" src="img/banner-main-1.jpg" alt="" />
+          <img class="img-fluid w-100" src="img/bn2.jpg" alt="" />
+          <img class="img-fluid mt-2" src="img/bn3.jpg" alt="" />
+          <img class="img-fluid mt-2" src="img/bn4.jpg" alt="" />
         </div>
       </div>
     </div>

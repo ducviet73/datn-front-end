@@ -6,6 +6,7 @@ import Category from "./category/page";
 import ProductSale from "./components/productsale.jsx";
 import ProductBestselling from "./components/productbestselling";
 import ProductHot from "./components/producthot";
+import ProductNew from "./components/productnew";
 
 export default async function Home() {
   const res = await fetch("http://localhost:3000/products", {
@@ -16,51 +17,12 @@ export default async function Home() {
   return (
     <>
       <Banner />
-      <div className="container my-3">
-        <div>
-          <div className="row d-flex justify-content-between mx-1 ">
-            <div className="container-nav-brand-table-title">
-              <div className="nav-brand-table-title-animated">
-                <h3>Sản phẩm mới </h3>
-              </div>
-            </div>
-          </div>
-          <div className="row ">
-            <ProductCard data={data} />
-          </div>
-        </div>
-      </div>
+      
+      <ProductNew/>
+
       <ProductSale />
 
-      <div className="container my-3">
-        <div className="container-outfit-product-all">
-          <div className="container-nav-brand-table-title">
-            <div className="nav-brand-table-title-animated">
-              <h3>Trend Outfits</h3>
-            </div>
-          </div>
-          <div className="container-outfit-product-items">
-            <div className="outfit-product-item">
-              <img src="img/outfit-1.jpg" alt="Outfit 1" />
-              <div className="outfit-product-item-text-content">
-                <span data-text="Outfits 1">Outfits 1</span>
-              </div>
-            </div>
-            <div className="outfit-product-item">
-              <img src="img/outfit-2.jpg" alt="Outfit 2" />
-              <div className="outfit-product-item-text-content">
-                <span data-text="Outfits 2">Outfits 2</span>
-              </div>
-            </div>
-            <div className="outfit-product-item">
-              <img src="img/outfit-3.jpg" alt="Outfit 3" />
-              <div className="outfit-product-item-text-content">
-                <span data-text="Outfits 3">Outfits 3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <ProductBestselling />
       <div className="container-nav-brand-table-title">
         <div className="nav-brand-table-title-animated">
@@ -97,10 +59,10 @@ export default async function Home() {
             </div>
             <div className="container-nav-brand-table-poduct-item">
               <div className="brand-table-poduct-item-img">
-                <img src="img/danhmuc-bancelona.jpg" alt="Barcelona" />
+                <img src="img/ad1.jpg" alt="Barcelona" />
               </div>
               <div className="brand-table-poduct-item-name">
-                <span>Barcelona</span>
+                <span>Adidas</span>
               </div>
               <div className="brand-table-poduct-item-name-main">
                 <button>Xem Ngay</button>
@@ -116,7 +78,7 @@ export default async function Home() {
                 <img src="img/danhmuc-nike-max.jpg" alt="Nike Max Jr" />
               </div>
               <div className="brand-table-poduct-item-name">
-                <span>Nike Max Jr</span>
+                <span>Nike</span>
               </div>
               <div className="brand-table-poduct-item-name-main">
                 <button>Xem Ngay</button>
@@ -129,10 +91,10 @@ export default async function Home() {
             </div>
             <div className="container-nav-brand-table-poduct-item">
               <div className="brand-table-poduct-item-img">
-                <img src="img/danhmuc-rela.jpg" alt="Rela" />
+                <img src="img/ad2.jpg" alt="Rela" />
               </div>
               <div className="brand-table-poduct-item-name">
-                <span>Rela</span>
+                <span>Adidas</span>
               </div>
               <div className="brand-table-poduct-item-name-main">
                 <button>Xem Ngay</button>

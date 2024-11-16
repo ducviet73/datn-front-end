@@ -160,12 +160,7 @@ export default function Detail({ params }) {
                 </div>
               </div>
             </div>
-            <div className="detail_temple_cauhinh">
-              <h4>Specifications</h4>
-              <div className="temple_cauhinh_items">
-                <b>{data.specifications}</b>
-              </div>
-            </div>
+            
             <div className="detail_temple_color">
               <h4>Colors</h4>
               <div style={styles.colorItems}>
