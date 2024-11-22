@@ -32,7 +32,7 @@ const Login = () => {
                 console.log(payload);
     
                 if (payload.role === 'admin') {
-                    router.push('http://localhost:3001/admin');
+                    router.push('https://datn-back-end.onrender.com/admin');
                 } else {
                     router.push('/');
                 }

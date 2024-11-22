@@ -1,8 +1,8 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
-// import ProductCard from "./components/ProductCard";
+import Image from "next/image";
+import styles from "./page.module.css";
+import ProductCard from "./components/ProductCard";
 import Banner from "./components/Banner";
-// import Category from "./category/page";
+import Category from "./category/page";
 import ProductSale from "./components/productsale.jsx";
 import ProductBestselling from "./components/productbestselling";
 import ProductHot from "./components/producthot";

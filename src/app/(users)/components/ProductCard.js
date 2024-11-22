@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/slices/cartSlices'; // Đảm bảo import đúng từ cartSlices.js
-// import Category from '../category/page';
+import Category from '../category/page';
 
 function ProductCard({ data }) {
   const router = useRouter();
